@@ -17,7 +17,7 @@ function ejercicio2(arrayFechas,fechaInicio,fechaFin){
     arrayFechas.forEach(element => {
         let nuevoArray=element.split('/');
        
-        if(nuevoArray[2] > arrayFechaInicio && nuevoArray[2] < arrayFechaFin[2]){
+        if(nuevoArray[2] > arrayFechaInicio[2] && nuevoArray[2] < arrayFechaFin[2]){
             arrayFinal.push(element);
             
         }else if(nuevoArray[2]==arrayFechaInicio[2] || nuevoArray[2]==arrayFechaFin[2]){
@@ -31,7 +31,7 @@ function ejercicio2(arrayFechas,fechaInicio,fechaFin){
             }
         }         
     });
-
+    arrayFinal.unshift(fechaInicio);
     return arrayFinal;
 }
 
